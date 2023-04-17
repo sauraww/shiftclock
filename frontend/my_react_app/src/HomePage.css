@@ -1,0 +1,69 @@
+/* HomePage.css */
+.home-page {
+    background-image: url('./components/assets/hrms.png');
+    background-size: cover; /* Add a background image */
+    background-size: cover;
+    padding-top: 100px;
+    background-position: center;
+    height: 100vh;
+  }
+  
+  .header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    background-color: #112842; /* Change the header background color */
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .btn-primary {
+    background-color: #28a745; /* Change the primary button color */
+    border-color: #28a745;
+    transition: background-color 0.3s ease; /* Add transition to the button */
+  }
+  
+  .btn-primary:hover {
+    background-color: #218838; /* Change the primary button hover color */
+    border-color: #1e7e34;
+  }
+  
+  .btn-outline-primary {
+    margin-left: 1rem;
+    transition: color 0.3s ease; /* Add transition to the button */
+  }
+  
+  .btn-outline-primary:hover {
+    color: #fff; /* Change the outline button hover color */
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .header {
+      font-size: 2rem; /* Adjust the font size on smaller screens */
+    }
+  
+    .title {
+      font-size: 1.2rem;
+    }
+  
+    .button-container {
+      flex-direction: column;
+    }
+  
+    .btn-outline-primary {
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+  }
+  

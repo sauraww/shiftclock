@@ -1,0 +1,71 @@
+body {
+  background-image: url('../assets/hrms.png');
+
+  }
+  
+  
+  
+  thead th {
+    font-size: 1.2rem;
+  }
+  
+  tbody td {
+    font-size: 1rem;
+  }
+  
+  tbody tr:hover {
+    background-color: #F7FAFC;
+  }
+  
+  svg {
+    fill: #4CAF50;
+  }
+  
+  .table {
+    border: 2px solid #78909C;
+    border-radius: 10px;
+  }
+  
+  .table th, .table td {
+    border-color: #78909C;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #F4F9FF;
+  }
+  
+  .table-bordered th, .table-bordered td {
+    border: 2px solid #78909C;
+  }
+
+  .table-hover tbody tr:hover {
+    background-color: #C6E0FF;
+  }
+    
+
+  .timesheets-container {
+    padding-top: 4px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll
+
+  }
+  
+  .table-container {
+    padding: 0 10px;
+
+  }
+  
+  .form-container {
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .download-button-container{
+    padding-top: 10px;
+  }
+
+  
