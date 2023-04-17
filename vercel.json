@@ -1,0 +1,46 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "frontend/my_react_app/package.json",
+        "use": "@vercel/static-build"
+      },
+      {
+        "src": "backend/manage.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize": "50mb"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+         "dest": "backend/backend/${1}"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "frontend/my_react_app/{$1}"
+      }
+    ],
+    "env": {
+      "DJANGO_SETTINGS_MODULE": "backend.settings"
+    },
+    "functions": {
+      "api": {
+        "memory": 1024,
+        "maxDuration": 10,
+        "env": {
+          "DJANGO_SETTINGS_MODULE": "backend.settings"
+        },
+        "buildCommand": "python manage.py collectstatic --noinput",
+        "serve": "gunicorn backend.wsgi:application --worker-tmp-dir /dev/shm --timeout 120 --workers 1 --threads 8 --worker-class=gthread --bind :$PORT",
+        "includedFiles": [
+          "backend/**/**",
+          "frontend/my_react_app/build/**",
+          "frontend/my_react_app/public/**"
+        ]
+      }
+    }
+  }
+  
