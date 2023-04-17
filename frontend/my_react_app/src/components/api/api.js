@@ -1,4 +1,4 @@
-const API_URL = 'https://shift-clock.vercel.app'; // Replace with your backend server URL
+const API_URL = 'https://shiftclock.vercel.app'; // Replace with your backend server URL
 
 async function request(url, options) {
   const requestOptions = {
